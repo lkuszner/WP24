@@ -11,3 +11,5 @@ add_executable(power main.c)
 target_link_libraries(
   power PUBLIC libpower
 )
+
+add_subdirectory(tests)
