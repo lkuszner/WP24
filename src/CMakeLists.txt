@@ -1,10 +1,13 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(square)
+project(Power)
 
 include_directories("${PROJECT_SOURCE_DIR}/include")
 
-file(GLOB sources "${PROJECT_SOURCE_DIR}/*.c")
+add_subdirectory(powerlib)
 
-add_executable(square ${sources})
+add_executable(power main.c)
 
+target_link_libraries(
+  power PUBLIC libpower
+)
